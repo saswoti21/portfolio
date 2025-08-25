@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
-import { Mail, Phone, MapPin, Linkedin, Send, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Send } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import { mockData } from '../mock/data';
 
@@ -24,28 +24,21 @@ const Contact = () => {
       label: 'Email',
       value: mockData.personal.email,
       href: `mailto:${mockData.personal.email}`,
-      color: 'from-blue-600 to-blue-700'
-    },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: mockData.personal.phone,
-      href: `tel:${mockData.personal.phone.replace(/\s+/g, '')}`,
-      color: 'from-green-600 to-green-700'
+      color: 'from-emerald-500 to-emerald-600'
     },
     {
       icon: MapPin,
       label: 'Location',
       value: mockData.personal.location,
       href: null,
-      color: 'from-purple-600 to-purple-700'
+      color: 'from-teal-500 to-teal-600'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'saswoti-panda',
       href: mockData.personal.linkedin,
-      color: 'from-blue-700 to-blue-800'
+      color: 'from-emerald-600 to-teal-600'
     }
   ];
 
@@ -102,7 +95,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Get In <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Touch</span>
+            Get In <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Ready to collaborate or discuss opportunities? I'd love to hear from you!
@@ -139,19 +132,6 @@ const Contact = () => {
                 ))}
               </CardContent>
             </Card>
-
-            {/* Additional Info */}
-            <Card className="bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white">
-              <CardContent className="p-6">
-                <div className="text-center">
-                  <CheckCircle className="w-12 h-12 mx-auto mb-4 text-white" />
-                  <h3 className="text-xl font-semibold mb-2">Available for Opportunities</h3>
-                  <p className="text-blue-100">
-                    Currently seeking data analyst positions and open to exciting projects. Let's discuss how we can work together!
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Contact Form */}
@@ -174,7 +154,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       placeholder="Your full name"
                       required
-                      className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                      className="border-gray-300 focus:border-emerald-500 focus:ring-emerald-500"
                     />
                   </div>
                   <div className="space-y-2">
@@ -187,7 +167,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       placeholder="your.email@example.com"
                       required
-                      className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                      className="border-gray-300 focus:border-emerald-500 focus:ring-emerald-500"
                     />
                   </div>
                 </div>
@@ -202,7 +182,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     placeholder="What would you like to discuss?"
                     required
-                    className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                    className="border-gray-300 focus:border-emerald-500 focus:ring-emerald-500"
                   />
                 </div>
 
@@ -216,14 +196,14 @@ const Contact = () => {
                     placeholder="Tell me more about your project or opportunity..."
                     rows={5}
                     required
-                    className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 resize-none"
+                    className="border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 resize-none"
                   />
                 </div>
 
                 <Button
                   type="submit"
                   disabled={!isFormValid || isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                  className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                 >
                   {isSubmitting ? (
                     <>

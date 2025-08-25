@@ -34,7 +34,7 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
+            Featured <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Showcasing practical applications of data science and machine learning expertise
@@ -49,7 +49,7 @@ const Projects = () => {
               <Card key={project.id} className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300 h-full">
                 <CardHeader className="pb-4">
                   <div className="flex items-start gap-4">
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-lg flex-shrink-0">
+                    <div className="bg-gradient-to-r from-emerald-500 to-teal-500 p-3 rounded-lg flex-shrink-0">
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
@@ -66,7 +66,7 @@ const Projects = () => {
                       </div>
                       <Badge 
                         variant="outline"
-                        className="text-blue-600 border-blue-200"
+                        className="text-emerald-600 border-emerald-200"
                       >
                         {project.category}
                       </Badge>
@@ -85,7 +85,7 @@ const Projects = () => {
                     <ul className="space-y-1">
                       {project.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-2 text-sm text-gray-600">
-                          <Target className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                          <Target className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -109,12 +109,12 @@ const Projects = () => {
                   </div>
 
                   {/* Project Metrics */}
-                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg">
+                  <div className="bg-gradient-to-r from-emerald-50 to-teal-50 p-4 rounded-lg">
                     <h4 className="font-medium text-gray-900 mb-3">Project Metrics:</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {Object.entries(project.metrics).map(([key, value]) => (
                         <div key={key} className="text-center">
-                          <div className="text-2xl font-bold text-blue-600">{value}</div>
+                          <div className="text-2xl font-bold text-emerald-600">{value}</div>
                           <div className="text-sm text-gray-600 capitalize">
                             {key.replace(/([A-Z])/g, ' $1').trim()}
                           </div>
@@ -127,7 +127,7 @@ const Projects = () => {
                   <div className="flex gap-3 pt-2">
                     <Button 
                       onClick={() => handleViewProject(project.id)}
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+                      className="flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 transition-all duration-200"
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       View Details
@@ -135,7 +135,7 @@ const Projects = () => {
                     <Button 
                       variant="outline"
                       onClick={() => handleViewCode(project.id)}
-                      className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-200"
+                      className="border-emerald-500 text-emerald-600 hover:bg-emerald-500 hover:text-white transition-all duration-200"
                     >
                       <Github className="w-4 h-4 mr-2" />
                       Code
@@ -145,30 +145,6 @@ const Projects = () => {
               </Card>
             );
           })}
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <Card className="bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold mb-4">Interested in collaborating?</h3>
-              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                I'm always excited to work on new data science projects and explore innovative solutions. Let's connect and discuss potential opportunities.
-              </p>
-              <Button 
-                variant="secondary"
-                className="bg-white text-blue-600 hover:bg-gray-100 transition-all duration-200"
-                onClick={() => {
-                  const element = document.querySelector('#contact');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                Get In Touch
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

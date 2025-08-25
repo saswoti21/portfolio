@@ -12,7 +12,7 @@ const Experience = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Professional <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Experience</span>
+            Professional <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">Experience</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Recent internships and hands-on experience in data analytics and machine learning
@@ -25,7 +25,7 @@ const Experience = () => {
               <CardHeader className="pb-4">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div className="flex items-start gap-4">
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-lg flex-shrink-0">
+                    <div className="bg-gradient-to-r from-emerald-500 to-teal-500 p-3 rounded-lg flex-shrink-0">
                       <Briefcase className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -57,7 +57,7 @@ const Experience = () => {
                       <Badge 
                         key={skillIndex}
                         variant="secondary"
-                        className="bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 hover:from-blue-200 hover:to-purple-200 transition-colors duration-200"
+                        className="bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-700 hover:from-emerald-200 hover:to-teal-200 transition-colors duration-200"
                       >
                         {skill}
                       </Badge>
@@ -67,28 +67,6 @@ const Experience = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Education Section */}
-        <div className="mt-16">
-          <Card className="bg-gradient-to-r from-blue-50 to-purple-50 shadow-lg border-0">
-            <CardHeader>
-              <CardTitle className="text-2xl font-semibold text-gray-900 text-center mb-4">
-                Education
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex items-center justify-center gap-4">
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-lg">
-                  <Briefcase className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-gray-900">Bachelor of Technology in Computer Science</h3>
-                  <p className="text-gray-600">DRIEMS University, Tangi, Cuttack</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
