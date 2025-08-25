@@ -113,59 +113,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-          {/* Contact Info */}
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-emerald-600" />
-              <span>Cuttack, Odisha</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-emerald-600" />
-              <span>saswotipanda9@gmail.com</span>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              onClick={() => handleContact('email')}
-              className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 transition-all duration-200 px-8 py-3 text-lg"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Get In Touch
-            </Button>
-            <Button 
-              variant="outline" 
-              onClick={scrollToAbout}
-              className="border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-500 hover:text-white transition-all duration-200 px-8 py-3 text-lg"
-            >
-              Learn More
-              <ArrowDown className="w-5 h-5 ml-2" />
-            </Button>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex justify-center gap-4 pt-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => handleContact('linkedin')}
-              className="text-emerald-600 hover:bg-emerald-100 transition-all duration-200"
-            >
-              <Linkedin className="w-6 h-6" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => handleContact('email')}
-              className="text-emerald-600 hover:bg-emerald-100 transition-all duration-200"
-            >
-              <Mail className="w-6 h-6" />
-            </Button>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
