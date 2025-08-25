@@ -36,7 +36,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Me</span>
+            About <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Discover my journey, passion, and commitment to data-driven excellence
@@ -70,7 +70,7 @@ const About = () => {
                 <Card key={index} className="bg-white shadow-md border-0 hover:shadow-lg transition-shadow duration-200">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-lg">
+                      <div className="bg-gradient-to-r from-emerald-500 to-teal-500 p-3 rounded-lg">
                         <highlight.icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
@@ -92,7 +92,7 @@ const About = () => {
                     <Badge 
                       key={index}
                       variant="secondary"
-                      className="bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 hover:from-blue-200 hover:to-purple-200 transition-colors duration-200 px-3 py-1"
+                      className="bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-700 hover:from-emerald-200 hover:to-teal-200 transition-colors duration-200 px-3 py-1"
                     >
                       {interest}
                     </Badge>

@@ -5,7 +5,6 @@ export const mockData = {
     name: "Saswoti Panda",
     title: "Data Analyst & Machine Learning Enthusiast",
     email: "saswotipanda9@gmail.com",
-    phone: "+91-7205735662",
     location: "Cuttack, Odisha",
     linkedin: "https://www.linkedin.com/in/saswoti-panda",
     resumeUrl: "https://customer-assets.emergentagent.com/job_4b2a9b6b-69cd-4619-8357-fd872d7de9df/artifacts/vmmanboc_Saswoti_Resume.pdf"
@@ -159,8 +158,7 @@ export const mockData = {
   // Social media links
   socialMedia: {
     linkedin: "https://www.linkedin.com/in/saswoti-panda",
-    email: "mailto:saswotipanda9@gmail.com",
-    phone: "tel:+917205735662"
+    email: "mailto:saswotipanda9@gmail.com"
   },
 
   // Navigation items

@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
-import { Mail, Phone, Linkedin, Download, Heart } from 'lucide-react';
+import { Mail, Linkedin, Download } from 'lucide-react';
 import { mockData } from '../mock/data';
 
 const Footer = () => {
@@ -13,19 +13,13 @@ const Footer = () => {
       icon: Mail,
       href: `mailto:${mockData.personal.email}`,
       label: 'Email',
-      color: 'hover:text-blue-600'
+      color: 'hover:text-emerald-600'
     },
     {
       icon: Linkedin,
       href: mockData.personal.linkedin,
       label: 'LinkedIn',
-      color: 'hover:text-blue-700'
-    },
-    {
-      icon: Phone,
-      href: `tel:${mockData.personal.phone.replace(/\s+/g, '')}`,
-      label: 'Phone',
-      color: 'hover:text-green-600'
+      color: 'hover:text-emerald-700'
     }
   ];
 
@@ -53,7 +47,7 @@ const Footer = () => {
   };
 
   const handleSocialClick = (href) => {
-    if (href.startsWith('mailto:') || href.startsWith('tel:')) {
+    if (href.startsWith('mailto:')) {
       window.location.href = href;
     } else {
       window.open(href, '_blank');
@@ -67,7 +61,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* About Section */}
           <div className="lg:col-span-2 space-y-4">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
               Saswoti Panda
             </h3>
             <p className="text-gray-300 max-w-md leading-relaxed">
@@ -112,7 +106,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-white">Get In Touch</h4>
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-blue-400" />
+                <Mail className="w-4 h-4 text-emerald-400" />
                 <a 
                   href={`mailto:${mockData.personal.email}`}
                   className="hover:text-white transition-colors duration-200 text-sm"
@@ -120,20 +114,11 @@ const Footer = () => {
                   {mockData.personal.email}
                 </a>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-green-400" />
-                <a 
-                  href={`tel:${mockData.personal.phone.replace(/\s+/g, '')}`}
-                  className="hover:text-white transition-colors duration-200 text-sm"
-                >
-                  {mockData.personal.phone}
-                </a>
-              </div>
               <div className="pt-2">
                 <Button
                   onClick={handleDownloadResume}
                   variant="outline"
-                  className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all duration-200"
+                  className="border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white transition-all duration-200"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Download Resume
@@ -149,14 +134,12 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-gray-400 text-sm text-center md:text-left">
-            <p className="flex items-center gap-1">
-              © {currentYear} Saswoti Panda. Made with 
-              <Heart className="w-4 h-4 text-red-500" fill="currentColor" />
-              for the data community.
+            <p>
+              © {currentYear} Saswoti Panda. All rights reserved.
             </p>
           </div>
           <div className="text-gray-400 text-sm text-center md:text-right">
-            <p>Ready to collaborate on your next data project?</p>
+            <p>Let's connect and build something amazing together!</p>
           </div>
         </div>
 
